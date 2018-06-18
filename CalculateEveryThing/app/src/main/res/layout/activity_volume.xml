@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="10dp"
+    android:background="@drawable/bg"
+    android:weightSum="10"
+    android:orientation="vertical"
+    tools:context=".Volume">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        tools:ignore="Suspicious0dp">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textStyle="bold"
+            android:text="@string/volume"
+            android:textColor="#fff"
+            android:textSize="34sp"
+            app:fontFamily="@font/abeezee" />
+
+    </RelativeLayout>
+
+    <!-- Grid View Card -->
+    <android.support.v7.widget.GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        app:columnCount="3">
+
+
+        <Button
+            android:id="@+id/cubeBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cube"
+            app:layout_columnWeight="1" />
+
+        <Button
+            android:id="@+id/coneBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cone"
+            app:layout_columnWeight="1" />
+
+        <Button
+            android:id="@+id/pyramidBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pyramid"
+            app:layout_columnWeight="1" />
+
+        <Button
+            android:id="@+id/cylinderBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cylinder"
+            app:layout_columnWeight="1" />
+
+        <Button
+            android:id="@+id/sphereBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sphere"
+            app:layout_columnWeight="1" />
+
+
+    </android.support.v7.widget.GridLayout>
+
+    <!-- cube View Card -->
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cubeView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="16dp"
+        android:layout_weight="6"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp"
+        android:visibility="visible"
+        android:layout_gravity="center_horizontal"
+        android:textAlignment="center"
+        android:background="@color/buttonColour">
+
+        <LinearLayout
+            android:background="@drawable/cube"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/volume_of_cube_side_x_side_x_side"
+                android:layout_margin="10dp"
+                android:layout_gravity="center_horizontal"
+                android:textAlignment="center" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_margin="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="@string/side"
+                    android:layout_margin="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:id="@+id/cubeRadius"
+                    android:numeric="decimal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/cubeCalc"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/calculate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:text="@string/volume_of_cube_is"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="16dp"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/cubeResult"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="15dp"
+                android:padding="5dp"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+    <!-- Cone view started -->
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/coneView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="16dp"
+        android:layout_weight="6"
+        android:visibility="gone"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp"
+        android:background="@color/buttonColour">
+
+        <LinearLayout
+            android:background="@drawable/cone"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="volume of cone = π X r X r X h / 3"
+                android:layout_margin="10dp"
+                android:layout_gravity="center_horizontal"
+                android:textAlignment="center" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_margin="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="@string/redius"
+                    android:layout_margin="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:id="@+id/coneRadius"
+                    android:numeric="decimal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_margin="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="@string/Height"
+                    android:layout_margin="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:id="@+id/coneHeight"
+                    android:numeric="decimal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/coneCalc"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/calculate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:text="@string/volume_of_cone"
+                android:layout_gravity="center_horizontal"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/coneResult"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="10dp"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+    <!--- pyramid view -->
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/pyramidView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="16dp"
+        android:layout_weight="6"
+        android:visibility="gone"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp"
+        android:background="@color/buttonColour">
+
+        <LinearLayout
+            android:background="@drawable/pyramid"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="volume of pyramid = l x w x h / 3"
+                android:layout_margin="5dp"
+                android:layout_gravity="center_horizontal"
+                android:textAlignment="center" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_margin="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="@string/length"
+                    android:layout_margin="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:id="@+id/pyramidLength"
+                    android:numeric="decimal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_margin="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="@string/Width"
+                    android:layout_margin="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:id="@+id/pyramidWidth"
+                    android:numeric="decimal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="@string/Height"
+                    android:layout_margin="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:id="@+id/pyramidHeight"
+                    android:numeric="decimal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/pyrCalc"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/calculate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:text="@string/volume_of_pyramid"
+                android:layout_gravity="center_horizontal"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/pyramidResult"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="10dp"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <!--  sphere card view started ..........-->
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/sphereView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="16dp"
+        android:layout_weight="6"
+        android:visibility="gone"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp"
+        android:background="@color/buttonColour">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:background="@drawable/sphere"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/volume_of_a_sphare_4_x_x_r_x_r_x_r_3"
+                android:layout_margin="10dp"
+                android:layout_gravity="center_horizontal"
+                android:textAlignment="center" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_margin="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="@string/redius"
+                    android:layout_margin="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:id="@+id/sphareRadius"
+                    android:numeric="decimal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/sphareCalc"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/calculate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:text="@string/volume_of_sphare"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="16dp"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/sphareResult"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="15dp"
+                android:padding="5dp"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <!-- cylinder card view started ..........-->
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cylinderView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="16dp"
+        android:layout_weight="6"
+        android:visibility="gone"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp"
+        android:background="@color/buttonColour">
+
+        <LinearLayout
+            android:background="@drawable/cylinder"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="volume of a cylinder = πrrh"
+                android:layout_margin="10dp"
+                android:layout_gravity="center_horizontal"
+                android:textAlignment="center" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_margin="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="@string/redius"
+                    android:layout_margin="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:id="@+id/cylinderRadius"
+                    android:numeric="decimal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_margin="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="@string/Height"
+                    android:layout_margin="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:id="@+id/cylinderHeight"
+                    android:numeric="decimal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/cylCalc"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/calculate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:text="@string/volume_of_cylinder"
+                android:layout_gravity="center_horizontal"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/cylinderResult"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="15dp"
+                android:padding="5dp"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+</LinearLayout>

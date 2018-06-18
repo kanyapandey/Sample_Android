@@ -1,0 +1,65 @@
+<resources>
+    <string name="app_name">Calculate EveryThing</string>
+    <string name="button">Button</string>
+    <string name="area">AREA</string>
+    <string name="perimeter">PERIMETER</string>
+    <string name="volume">VOLUME</string>
+    <string name="time">TIME</string>
+    <string name="unit_converter">UNIT CONVERTER</string>
+    <string name="calculate_everything">Calculate EveryThing</string>
+    <string name="interest_calculator">FINANCE</string>
+    <string name="circle">CIRCLE</string>
+    <string name="rectangle">RECTANGLE</string>
+    <string name="tringle">TRINGLE</string>
+    <string name="square">SQUARE</string>
+    <string name="area_of_a_circle">Area of a Circle = πr2</string>
+    <string name="redius">Radius</string>
+    <string name="calculate">Calculate</string>
+    <string name="area_of_a_circle_is">Area of a Circle is</string>
+    <string name="area_of_a_Rectangle">Area of Rectangle = wl</string>
+    <string name="Width">Width</string>
+    <string name="Height">Height</string>
+    <string name="area_of_a_Rectangle_is">Area of Rectangle is</string>
+    <string name="area_of_a_Triangle">Area of triangle = 1/2 base X height</string>
+    <string name="Base">Base</string>
+    <string name="area_of_a_Triangle_is">Area of a Triangle is</string>
+    <string name="area_of_a_Square">Area of a Square = side X side</string>
+    <string name="side">Side</string>
+    <string name="area_of_a_Square_is">Area of a Square</string>
+    <string name="circumference_2_r">circumference=2πr</string>
+    <string name="circumference_of_a_circle">Circumference of a Circle</string>
+    <string name="perimeter_of_rectangle_2_l_w">perimeter of rectangle = 2(l+w)</string>
+    <string name="perimeter_of_rectangle_is">perimeter of rectangle is</string>
+    <string name="perimeter_of_square_4side">perimeter of square = 4side</string>
+    <string name="perimeter_of_square_is">perimeter of Square is</string>
+    <string name="tringle_a">side 1</string>
+    <string name="triangle_b">side 2</string>
+    <string name="triangle_c">side 3</string>
+    <string name="perimeter_of_triangle_a_b_c">perimeter of triangle = a+b+c</string>
+    <string name="cube">Cube</string>
+    <string name="cone">CONE</string>
+    <string name="pyramid">PYRAMID</string>
+    <string name="cylinder">CYLINDER</string>
+    <string name="sphere">SPHERE</string>
+    <string name="prism">PRISM</string>
+    <string name="volume_of_cube_side_x_side_x_side">volume of cube = side x side x side</string>
+    <string name="volume_of_cube_is">Volume of cube is</string>
+    <string name="volume_of_cone">Volume of cone</string>
+    <string name="length">length</string>
+    <string name="volume_of_pyramid">volume of pyramid</string>
+    <string name="volume_of_a_sphare_4_x_x_r_x_r_x_r_3">volume of a sphare = 4 x π x r x r x r/3</string>
+    <string name="volume_of_sphare">volume of sphare</string>
+    <string name="volume_of_cylinder">volume of cylinder</string>
+    <string name="weight">WEIGHT</string>
+    <string name="distance">DISTANCE</string>
+    <string name="temprature">TEMPRATURE</string>
+    <string name="liquid">LIQUID</string>
+    <string name="distance_prompt">Choose a unit</string>
+    <string name="select_unit_for_convert">select unit for convert</string>
+    <string name="select_second_unit_for_convert">Select second unit for convert</string>
+    <string name="liquid_prompt">Select Unit</string>
+    <string name="weight_prompt">Weight</string>
+    <string name="temp_prompt">Tempreture</string>
+
+
+</resources>

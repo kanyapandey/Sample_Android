@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="10dp"
+    android:background="@drawable/bg"
+    android:weightSum="10"
+    android:orientation="vertical"
+    tools:context=".UnitConverter">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        tools:ignore="Suspicious0dp">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textStyle="bold"
+            android:text="@string/unit_converter"
+            android:textColor="#fff"
+            android:textSize="34sp"
+            app:fontFamily="@font/abeezee" />
+
+    </RelativeLayout>
+
+    <!-- Grid View Card -->
+    <android.support.v7.widget.GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        app:columnCount="3">
+
+
+        <Button
+            android:id="@+id/distanceBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/distance"
+            app:layout_columnWeight="1" />
+
+        <Button
+            android:id="@+id/weightBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/weight"
+            app:layout_columnWeight="1" />
+
+        <Button
+            android:id="@+id/tempratureBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/temprature"
+            app:layout_columnWeight="1" />
+        <Button
+            android:id="@+id/liquidBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/liquid"
+            app:layout_columnWeight="1"
+            app:layout_column="1"/>
+    </android.support.v7.widget.GridLayout>
+
+    <!-- Circle View Card -->
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/distView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="16dp"
+        android:layout_weight="6"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp"
+        android:visibility="gone"
+        android:layout_gravity="center_horizontal"
+        android:textAlignment="center"
+        android:background="@color/buttonColour">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_gravity="center_horizontal"
+                android:textAlignment="center"
+                android:layout_margin="10dp"
+                android:text="@string/select_unit_for_convert"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <Spinner
+                android:id="@+id/distSpring1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/distance_unit"
+                android:prompt="@string/distance_prompt" />
+            <EditText
+                android:id="@+id/distVal"
+                android:numeric="decimal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_gravity="center_horizontal"
+                android:textAlignment="center"
+                android:layout_margin="10dp"
+                android:text="@string/select_second_unit_for_convert"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <Spinner
+                android:id="@+id/distSpring2"
+                android:entries="@array/distance_unit"
+                android:prompt="@string/distance_prompt"
+                android:layout_margin="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </Spinner>
+
+            <Button
+                android:id="@+id/distCalcBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/calculate"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/distResult"
+                android:layout_margin="10dp"
+                android:textStyle="bold"/>
+
+
+        </LinearLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+    <!-- Liquid converter -->
+    <android.support.v7.widget.CardView
+        android:id="@+id/liquidView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="16dp"
+        android:layout_weight="6"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp"
+        android:visibility="visible"
+        android:layout_gravity="center_horizontal"
+        android:textAlignment="center"
+        android:background="@color/buttonColour">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_gravity="center_horizontal"
+                android:textAlignment="center"
+                android:layout_margin="10dp"
+                android:text="@string/select_unit_for_convert"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <Spinner
+                android:id="@+id/liqSpring1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/liquid_unit"
+                android:prompt="@string/liquid_prompt" />
+            <EditText
+                android:id="@+id/liqVal"
+                android:numeric="decimal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_gravity="center_horizontal"
+                android:textAlignment="center"
+                android:layout_margin="10dp"
+                android:text="@string/select_second_unit_for_convert"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <Spinner
+                android:id="@+id/liqSpring2"
+                android:entries="@array/liquid_unit"
+                android:prompt="@string/liquid_prompt"
+                android:layout_margin="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </Spinner>
+
+            <Button
+                android:id="@+id/liqCalcBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/calculate"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/liqResult"
+                android:layout_margin="10dp"
+                android:textStyle="bold"/>
+
+
+        </LinearLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+    <!-- weight -->
+    <android.support.v7.widget.CardView
+        android:id="@+id/weightView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="16dp"
+        android:layout_weight="6"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp"
+        android:visibility="gone"
+        android:layout_gravity="center_horizontal"
+        android:textAlignment="center"
+        android:background="@color/buttonColour">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_gravity="center_horizontal"
+                android:textAlignment="center"
+                android:layout_margin="10dp"
+                android:text="@string/select_unit_for_convert"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <Spinner
+                android:id="@+id/weiSpring1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/weight_unit"
+                android:prompt="@string/weight_prompt" />
+            <EditText
+                android:id="@+id/weiVal"
+                android:numeric="decimal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_gravity="center_horizontal"
+                android:textAlignment="center"
+                android:layout_margin="10dp"
+                android:text="@string/select_second_unit_for_convert"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <Spinner
+                android:id="@+id/weiSpring2"
+                android:entries="@array/weight_unit"
+                android:prompt="@string/weight_prompt"
+                android:layout_margin="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </Spinner>
+
+            <Button
+                android:id="@+id/weiCalcBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/calculate"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/weiResult"
+                android:layout_margin="10dp"
+                android:textStyle="bold"/>
+
+
+        </LinearLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+    // temperature
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/tempView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="16dp"
+        android:layout_weight="6"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp"
+        android:visibility="visible"
+        android:layout_gravity="center_horizontal"
+        android:textAlignment="center"
+        android:background="@color/buttonColour">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_gravity="center_horizontal"
+                android:textAlignment="center"
+                android:layout_margin="10dp"
+                android:text="@string/select_unit_for_convert"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <Spinner
+                android:id="@+id/tempSpring1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/temp_unit"
+                android:prompt="@string/temp_prompt" />
+            <EditText
+                android:id="@+id/tempVal"
+                android:numeric="decimal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_gravity="center_horizontal"
+                android:textAlignment="center"
+                android:layout_margin="10dp"
+                android:text="@string/select_second_unit_for_convert"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <Spinner
+                android:id="@+id/tempSpring2"
+                android:entries="@array/temp_unit"
+                android:prompt="@string/temp_prompt"
+                android:layout_margin="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </Spinner>
+
+            <Button
+                android:id="@+id/tempCalcBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/calculate"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tempResult"
+                android:layout_margin="10dp"
+                android:textStyle="bold"/>
+
+
+        </LinearLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

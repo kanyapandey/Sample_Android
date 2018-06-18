@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="10dp"
+    android:background="@drawable/bg"
+    android:weightSum="10"
+    android:orientation="vertical"
+    tools:context=".Perimeter">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        tools:ignore="Suspicious0dp">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textStyle="bold"
+            android:text="@string/perimeter"
+            android:textColor="#fff"
+            android:textSize="34sp"
+            app:fontFamily="@font/abeezee" />
+
+    </RelativeLayout>
+
+    <!-- Grid View Card -->
+    <android.support.v7.widget.GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        app:columnCount="3">
+
+
+        <Button
+            android:id="@+id/circleBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/circle"
+            app:layout_columnWeight="1" />
+
+        <Button
+            android:id="@+id/rectangleBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rectangle"
+            app:layout_columnWeight="1" />
+
+        <Button
+            android:id="@+id/TriangleBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tringle"
+            app:layout_columnWeight="1" />
+        <Button
+            android:id="@+id/squareBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/square"
+            app:layout_columnWeight="1"
+            app:layout_column="1"/>
+    </android.support.v7.widget.GridLayout>
+
+    <!-- Circle View Card -->
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/circleView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="16dp"
+        android:layout_weight="6"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp"
+        android:visibility="gone"
+        android:layout_gravity="center_horizontal"
+        android:textAlignment="center"
+        android:background="@color/buttonColour">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/circumference_2_r"
+                android:layout_margin="10dp"
+                android:layout_gravity="center_horizontal"
+                android:textAlignment="center" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_margin="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="@string/redius"
+                    android:layout_margin="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:id="@+id/radiusValue"
+                    android:numeric="decimal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/calcCircleBtn"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/calculate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:text="@string/circumference_of_a_circle"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="16dp"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/areaOfCircleResult"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="15dp"
+                android:padding="5dp"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+    <!-- Rectangle view started -->
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/rectangleView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="16dp"
+        android:layout_weight="6"
+        android:visibility="gone"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp"
+        android:background="@color/buttonColour">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/perimeter_of_rectangle_2_l_w"
+                android:layout_margin="10dp"
+                android:layout_gravity="center_horizontal"
+                android:textAlignment="center" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_margin="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="@string/Width"
+                    android:layout_margin="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:id="@+id/WidthValueRec"
+                    android:numeric="decimal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_margin="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="@string/Height"
+                    android:layout_margin="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:id="@+id/heightValueRec"
+                    android:numeric="decimal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/calcRectBtn"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/calculate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:text="@string/perimeter_of_rectangle_is"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="5dp"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/areaOfRectangleResult"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="10dp"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+    <!--- Area of Triangle started from here -->
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/triangleView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="16dp"
+        android:layout_weight="6"
+        android:visibility="visible"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp"
+        android:background="@color/buttonColour">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/perimeter_of_triangle_a_b_c"
+                android:layout_margin="5dp"
+                android:layout_gravity="center_horizontal"
+                android:textAlignment="center" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_margin="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="@string/tringle_a"
+                    android:layout_margin="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:id="@+id/side1"
+                    android:numeric="decimal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_margin="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="@string/triangle_b"
+                    android:layout_margin="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:id="@+id/side2"
+                    android:numeric="decimal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="@string/triangle_c"
+                    android:layout_margin="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:id="@+id/side3"
+                    android:numeric="decimal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/calcTriBtn"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/calculate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:text="@string/area_of_a_Triangle_is"
+                android:layout_gravity="center_horizontal"
+
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/areaOfTrangleResult"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="10dp"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <!-- Square card view started ..........-->
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/squareView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="16dp"
+        android:layout_weight="6"
+        android:visibility="gone"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp"
+        android:background="@color/buttonColour">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/perimeter_of_square_4side"
+                android:layout_margin="10dp"
+                android:layout_gravity="center_horizontal"
+                android:textAlignment="center" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_margin="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="@string/side"
+                    android:layout_margin="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:id="@+id/sideValuesqu"
+                    android:numeric="decimal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/calcSquBtn"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/calculate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:text="@string/perimeter_of_square_is"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="16dp"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/areaOfSquareResult"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="15dp"
+                android:padding="5dp"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+</LinearLayout>

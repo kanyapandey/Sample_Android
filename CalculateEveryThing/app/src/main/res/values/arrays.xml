@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="liquid_unit">
+        <item>liter</item>
+        <item>milliliter</item>
+    </string-array>
+
+    <string-array name="temp_unit">
+        <item>celsius</item>
+        <item>fahrenheit</item>
+        <item>kelvin</item>
+    </string-array>
+
+    <string-array name="weight_unit">
+        <item>gram</item>
+        <item>kilogram</item>
+        <item>quintal</item>
+        <item>tonne</item>
+    </string-array>
+
+    <string-array name="distance_unit">
+        <item id="l_inches">Inches</item>
+        <item>Feet</item>
+        <item>Yards</item>
+        <item>Miles</item>
+        <item>Millimeters</item>
+        <item>Centimeters</item>
+        <item>Meters</item>
+        <item>Kilometers</item>
+    </string-array>
+</resources>

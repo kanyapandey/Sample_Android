@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Calculate EveryThing</string>
+    <string name="button">Button</string>
+    <string name="area">क्षेत्रफ़ल</string>
+    <string name="time">वेळ</string>
+    <string name="unit_converter">एकक रूपांतर</string>
+    <string name="interest_calculator">व्याज कॅल्क्युलेटर</string>
+    <string name="calculate_everything">Calculate EveryThing</string>
+    <string name="perimeter">" परिमिती"</string>
+    <string name="volume">घनफळ</string>
+    <string name="circle">वर्तृळ</string>
+    <string name="rectangle">आयत</string>
+    <string name="tringle">त्रिकोण</string>
+    <string name="square">चौरस</string>
+    <string name="area_of_a_circle">वर्तुळाचे क्षेत्र = πr2</string>
+</resources>
